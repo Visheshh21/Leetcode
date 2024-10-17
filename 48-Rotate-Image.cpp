@@ -11,14 +11,17 @@ public:
             }
         }
 
-        while (startrow <= endrow) {
-            int startcol = 0, endcol = col - 1;
-            while (startcol < endcol) {
-                swap(matrix[startrow][startcol],matrix[startrow][endcol]);
-                startcol++;
-                endcol--;
-            }
-            startrow++;
+        // while (startrow <= endrow) {
+        //     int startcol = 0, endcol = col - 1;
+        //     while (startcol < endcol) {
+        //         swap(matrix[startrow][startcol],matrix[startrow][endcol]);
+        //         startcol++;
+        //         endcol--;
+        //     }
+        //     startrow++;
+        // }
+        for(int i=0;i<row;i++){
+            reverse(matrix[i].begin(),matrix[i].end());
         }
     }
 };
